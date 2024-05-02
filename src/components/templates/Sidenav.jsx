@@ -30,7 +30,7 @@ function Sidenav() {
             <h1 className=" text-md text-center px-4 py-2 rounded-xl font-semibold bg-[#6555cd]">
               New Feeds
             </h1>
-            <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white ">
+            <Link to="/trending" className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white ">
               <ImFire />
               Trending
             </Link>

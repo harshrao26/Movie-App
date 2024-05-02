@@ -7,7 +7,7 @@ function Dropdown({ title, options, onChange }) {
       <h1 className="text-sm">{title}</h1>
       {/* Dropdown select element */}
       <select
-        className="mt-2 rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm text-black"
+        className=" rounded-md border  border-gray-300 shadow-sm px-4 py-2 bg-white text-sm text-black"
         name="dropdown"
         onChange={onChange} // Update state when an option is selected
       >

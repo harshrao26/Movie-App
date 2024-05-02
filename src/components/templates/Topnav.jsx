@@ -25,7 +25,7 @@ function Topnav() {
   }, [query]);
   return (
     <>
-      <div className="relative ">
+      <div className="relative text-black ">
         <div className="flex items-center text-white gap-4 w-full text-2xl h-20 justify-center">
           <IoSearchSharp className="" />
           <input

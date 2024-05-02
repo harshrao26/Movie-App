@@ -4,6 +4,7 @@ import Header from "./templates/Header";
 import Topnav from "./templates/Topnav";
 import axios from "../utils/axios";
 import TrendingCardContainer from "./templates/TrendingCardContainer";
+import Loader from '../components/templates/Loader';
 function Home() {
   const [wallpaper, setWallpaper] = useState(null);
   const getWallpaper = async () => {
@@ -36,7 +37,7 @@ function Home() {
     </>
   ) : (
     <div className="w-full h-screen flex justify-center items-center text-white text-4xl">
-      <>Loading...</>
+      <Loader />
     </div>
   );
 }
