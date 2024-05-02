@@ -3,12 +3,14 @@ import Sidenav from "./templates/Sidenav";
 import Header from "./templates/Header";
 import Topnav from "./templates/Topnav";
 import axios from "../utils/axios";
+import TrendingCardContainer from "./templates/TrendingCardContainer";
 function Home() {
   const [wallpaper, setWallpaper] = useState(null);
   const getWallpaper = async () => {
     try {
       const { data } = await axios.get(`/trending/all/day`);
-      let randomWallpaper = data.results[Math.floor(Math.random() * data.results.length)];;
+      let randomWallpaper =
+        data.results[Math.floor(Math.random() * data.results.length)];
 
       setWallpaper(randomWallpaper);
     } catch (error) {
@@ -16,21 +18,22 @@ function Home() {
     }
   };
 
-  console.log(wallpaper);
+  // console.log(wallpaper);
 
   useEffect(() => {
     !wallpaper && getWallpaper();
   }, []);
   return wallpaper ? (
     <>
-      <div className="flex h-screen">
+      <div className="flex h-screen bg-zinc-900">
         <Sidenav />
-        <div className="w-[80%] ">
+        <div className="w-[80%] ml-[20%]">
           <Topnav />
           <Header data={wallpaper} />
+          <TrendingCardContainer />
         </div>
       </div>
-    </> 
+    </>
   ) : (
     <div className="w-full h-screen flex justify-center items-center text-white text-4xl">
       <>Loading...</>

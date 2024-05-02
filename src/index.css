@@ -1,7 +1,10 @@
 *{
-  font-family: 'Poppins'
+  font-family: 'Poppins';
 }
-
+body{
+  background-color: #18181b;
+  
+}
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +15,6 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #6556cd;
+  background-color: #e4e4e4;
   border-radius: 10px;
 }
