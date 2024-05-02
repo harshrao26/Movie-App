@@ -1,6 +1,8 @@
 import React from "react";
 import { SlCalender } from "react-icons/sl";
 import { MdLocalMovies } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { LuPlayCircle } from "react-icons/lu";
 
 function Header({ data }) {
   return (
@@ -24,13 +26,19 @@ function Header({ data }) {
             <div className="text-sm flex justify-center tracking-normal items-center">
               <div className="flex px-4 items-center gap-2">
                 <SlCalender className="" />
-                {data.release_date}
+                {data.release_date || "No Info."}
               </div>
 
               <div className="flex px-4 items-center gap-2">
                 <MdLocalMovies className="" />
-                {data.media_type}
+                {data.media_type.toUpperCase()}
               </div>
+            </div>
+            <div className="text-sm flex justify-center tracking-normal items-center" >
+              <Link className="text-blue-400 flex items-center gap-1 hover:text-blue-300 hover:scale-150 transition-all ease-out duration-200">
+                <LuPlayCircle />
+                <h1>Watch Trailer</h1>
+              </Link>
             </div>
           </div>
         </div>
