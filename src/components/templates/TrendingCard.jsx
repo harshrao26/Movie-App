@@ -1,6 +1,6 @@
 import React from "react";
-import noimg from '../../assets/no-image.png';
-function TrendingCard({ data }) {
+import noimg from "../../assets/no-image.png";
+function TrendingCard({ data}) {
   return (
     <div className="w-[15%] h-full  rounded-md relative overflow-hidden">
       <img
