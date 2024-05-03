@@ -11,7 +11,7 @@ import { IoMdCall } from "react-icons/io";
 function Sidenav() {
   return (
     <>
-      <div className="w-[20%] fixed top-0  z-50 ">
+      <div className="w-[20%] fixed top-0 h-[100vh] z-50 text-white ">
         <div className="flex text-white h-24 items-center justify-center gap-2">
           <svg
             className="w-12 text-blue-500"
@@ -30,14 +30,24 @@ function Sidenav() {
             {/* <h1 className=" text-md text-center px-4 py-2 rounded-xl font-semibold bg-blue-500">
               New Feeds
             </h1> */}
-            <Link to="/trending" className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
+            
+            <Link
+              to="/trending"
+              className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white "
+            >
               <ImFire />
               Trending
             </Link>
-            <Link to='/popular' className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
+            <Link
+              to="/popular"
+              className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white "
+            >
               <WiStars /> Popular
             </Link>
-            <Link to="/movie" className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
+            <Link
+              to="/movie"
+              className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white "
+            >
               <IoPlaySkipForwardOutline /> Movie
             </Link>
             <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
@@ -49,11 +59,23 @@ function Sidenav() {
           </div>
           {/* <div className=" border-t-[1px] border-solid border-zinc-100"></div> */}
           <div className="flex flex-col gap-4">
-            <h1 className="font-semibold tracking-tight text-blue-500">Website Info.</h1>
-            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white "><IoIosInformationCircle /> About </Link>
-            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white "><IoMdCall /> Contact </Link>
-
+            <h1 className="font-semibold tracking-tight text-blue-500">
+              Website Info.
+            </h1>
+            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white ">
+              <IoIosInformationCircle /> About{" "}
+            </Link>
+            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white ">
+              <IoMdCall /> Contact{" "}
+            </Link>
           </div>
+          {/* <div
+              className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50 z-10"
+              style={{
+                background:
+                  "linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2), rgba(0,0,0,0), rgba(0,0,0,0))",
+              }}
+            /> */}
         </nav>
       </div>
     </>
