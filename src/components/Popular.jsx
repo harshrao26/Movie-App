@@ -8,26 +8,31 @@ import TrendingCard from "../components/templates/TrendingCard";
 import Loader from "../components/templates/Loader";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-function Trending() {
+function Popular() {
   const back = useNavigate();
-  const [trending, setTrending] = useState([]);
-  const [category, setCategory] = useState("all");
+
+  const [popular, setPopular] = useState([]);
+  const [category, setCategory] = useState("tv");
   const [duration, setDuration] = useState("day");
   const [page, setPage] = useState(1);
 
-  const getTrending = async () => {
+  const getPopular = async () => {
     try {
-      // Fetch trending data based on category, duration, and page number
-      const { data } = await axios.get(`/trending/${category}/${duration}?page=${page}`);
-      setTrending((prevTrending) => [...prevTrending, ...data.results]);
-      setPage(page + 1); // Increment page number for next pagination
+      // Fetch popular data based on category, duration, and page number
+      const { data } = await axios.get(
+        `${category}/popular/?page=${page}`
+      );
+      // Update popular state with fetched data
+      setPopular((prevPopular) => [...prevPopular, ...data.results]);
+      // Increment page number for next pagination
+      setPage(page + 1);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getTrending();
+    getPopular();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, duration, page]); // Include page as a dependency
 
@@ -46,10 +51,10 @@ function Trending() {
           className="flex gap- items-center text-lg cursor-pointer"
           onClick={() => back(-1)}
         >
-          <IoIosArrowBack className="text-blue-500" /> Back
+          <IoIosArrowBack /> Back
         </div>
         <div className="flex justify-between items-center">
-          <h1 className="text-5xl tracking-tighter ">Trending</h1>
+          <h1 className="text-5xl tracking-tighter ">Popular</h1>
           <div className="w-[200vw]">
             <Topnav />
           </div>
@@ -57,7 +62,7 @@ function Trending() {
             <Dropdown
               title="Category"
               onChange={handleCategoryChange}
-              options={["all", "movie", "tv", "people"]}
+              options={["movie", "tv"]}
             />
             <Dropdown
               title="Duration"
@@ -68,14 +73,14 @@ function Trending() {
         </div>
         {/* Infinite Scroll Component */}
         <InfiniteScroll
-          dataLength={trending.length} // Length of the data
-          next={getTrending} // Function to call when more data needs to be fetched
+          dataLength={popular.length} // Length of the data
+          next={getPopular} // Function to call when more data needs to be fetched
           hasMore={true} // Whether there is more data to load
           loader={<Loader />} // Loader component to display while loading more data
           className="flex flex-wrap justify-center gap-8 mt-2" // Additional styling for the scrollable area
         >
-          {/* Map through trending data and render TrendingCard component */}
-          {trending.map((value, key) => (
+          {/* Map through popular data and render TrendingCard component */}
+          {popular.map((value, key) => (
             <TrendingCard data={value} key={key} />
           ))}
         </InfiniteScroll>
@@ -84,4 +89,4 @@ function Trending() {
   );
 }
 
-export default Trending;
+export default Popular;

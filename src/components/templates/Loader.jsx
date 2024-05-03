@@ -4,8 +4,8 @@ import Loading from "../../assets/Loader.gif";
 function Loader() {
   return (
     <>
-      <div className="w-full h-full bg-black flex justify-center items-center">  
-        <img className="" src={Loading} alt="Loading..." />
+      <div className="bg-green400 w-full h-full flex justify-center items-center">  
+        <img className="w-[40%]" src={Loading} alt="Loading..." />
       </div>
     </>
   );
