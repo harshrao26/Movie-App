@@ -7,13 +7,13 @@ function Dropdown({ title, options, onChange }) {
       <h1 className="text-sm">{title}</h1>
       {/* Dropdown select element */}
       <select
-        className=" rounded-md border outline-none border-gray-300 shadow-sm px-4 py-2 bg-white text-sm text-black"
+        className=" rounded-md outline-none border outline-non border-gray-300 shadow-sm px-4 py-2 text-sm text-white bg-zinc-900 capitalize"
         name="dropdown"
         onChange={onChange} // Update state when an option is selected
       >
         {/* Map through options and create dropdown options */}
         {options.map((value, key) => (
-          <option key={key} value={value}>
+          <option key={key} value={value} >
             {value.toUpperCase()}
           </option>
         ))}

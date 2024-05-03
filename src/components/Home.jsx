@@ -26,12 +26,12 @@ function Home() {
   }, []);
   return wallpaper ? (
     <>
-      <div className="flex h-screen bg-zinc-900">
+      <div className="flex h-screen bg-zinc-900 relative ">
         <Sidenav />
-        <div className="w-[80%] ml-[20%]">
+        <div className="w-[80%] ml-[20%] ">
           <Topnav />
-          <Header data={wallpaper} />
-          <TrendingCardContainer />
+          <Header data={wallpaper}  className=""/>
+          <TrendingCardContainer className="mt-[80vh]" />
         </div>
       </div>
     </>

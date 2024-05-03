@@ -28,9 +28,9 @@ function TrendingCardContainer() {
 
   return (
     <>
-      <div className="bg-zinc-900 m-4 ">
+      <div className="bg-zinc-900 mx-4 mt-[90vh]">
         <div className=" flex  justify-between my-8">
-          <div className="text-xl gap-2 tracking-tighter flex items-center font-semibold bg-white text-zinc-900  px-4 rounded-lg">
+          <div className="text-xl gap-2 tracking-tighter flex items-center font-semibold text-white  px-4 rounded-lg">
             <h1 className="text-orange-600">
               <ImFire />
             </h1>

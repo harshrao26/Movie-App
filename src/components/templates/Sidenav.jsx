@@ -11,7 +11,7 @@ import { IoMdCall } from "react-icons/io";
 function Sidenav() {
   return (
     <>
-      <div className="w-[20%] border-r-[3px] border-solid border-zinc-600 fixed top-0  ">
+      <div className="w-[20%] fixed top-0  z-50 ">
         <div className="flex text-white h-24 items-center justify-center gap-2">
           <svg
             className="w-12 text-blue-500"
@@ -27,9 +27,9 @@ function Sidenav() {
         </div>
         <nav className="flex flex-col gap-4 text-white px-5">
           <div className="flex flex-col gap-4">
-            <h1 className=" text-md text-center px-4 py-2 rounded-xl font-semibold bg-blue-500">
+            {/* <h1 className=" text-md text-center px-4 py-2 rounded-xl font-semibold bg-blue-500">
               New Feeds
-            </h1>
+            </h1> */}
             <Link to="/trending" className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <ImFire />
               Trending
@@ -37,7 +37,7 @@ function Sidenav() {
             <Link to='/popular' className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <WiStars /> Popular
             </Link>
-            <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
+            <Link to="/movie" className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <IoPlaySkipForwardOutline /> Movie
             </Link>
             <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
@@ -47,7 +47,7 @@ function Sidenav() {
               <BsFillPeopleFill /> Pepole
             </Link>
           </div>
-          <div className=" border-t-[1px] border-solid border-zinc-100"></div>
+          {/* <div className=" border-t-[1px] border-solid border-zinc-100"></div> */}
           <div className="flex flex-col gap-4">
             <h1 className="font-semibold tracking-tight text-blue-500">Website Info.</h1>
             <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white "><IoIosInformationCircle /> About </Link>

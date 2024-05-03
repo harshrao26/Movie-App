@@ -7,7 +7,7 @@ import { LuPlayCircle } from "react-icons/lu";
 function Header({ data }) {
   return (
     <>
-      <div className="w-full flex justify-center ">
+      <div className="w-full left-0  flex justify-center absolute top-0 z-10">
         <div
           style={{
             background: `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3),rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original/${
@@ -16,7 +16,7 @@ function Header({ data }) {
             backgroundPosition: "top",
             backgroundSize: "cover",
           }}
-          className="w-[100%] h-[70vh]"
+          className="w-[100%] h-[100vh]"
         >
           <div className="text-white text-5xl text-center gap-2 h-full flex flex-col pb-6 justify-end tracking-tighter">
             <h1>{data.title || data.original_name || data.original_title}</h1>
