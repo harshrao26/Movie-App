@@ -1,8 +1,9 @@
 import React from "react";
 import noimg from "../../assets/no-image.png";
-function TrendingCard({ data}) {
+import { Link } from "react-router-dom";
+function TrendingCard({ data }) {
   return (
-    <div className="w-[15%] h-full  rounded-md relative overflow-hidden">
+    <Link className="w-[15%] rounded-md relative overflow-hidden" to={``}>
       <img
         src={
           data.backdrop_path || data.poster_path
@@ -24,7 +25,7 @@ function TrendingCard({ data}) {
         {data.title || data.original_name || data.original_title || data.name}
       </h1>
       {/* <p className="absolute bottom-0 w-full text-sm p-2">{data.overview}</p> */}
-    </div>
+    </Link>
   );
 }
 
