@@ -10,7 +10,7 @@ function Header({ data }) {
       <div className="w-full left-0  flex justify-center absolute top-0 z-10">
         <div
           style={{
-            background: `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3),rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original/${
+            background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.2),rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original/${
               data.backdrop_path || data.profile_path
             } )`,
             backgroundPosition: "top",
@@ -18,9 +18,9 @@ function Header({ data }) {
           }}
           className="w-[100%] h-[100vh]"
         >
-          <div className="text-white text-5xl text-center gap-2 h-full flex flex-col pb-6 justify-end tracking-tighter">
+          <div className="text-white text-6xl text-center gap-2 h-full flex flex-col pb-6 justify-end tracking-tighter">
             <h1>{data.title || data.original_name || data.original_title}</h1>
-            <p className="text-xs tracking-normal flex items-center justify-center px-40 ">
+            <p className="text-sm tracking-normal flex items-center justify-center px-40 ">
               {data.overview.slice()}
             </p>
             <div className="text-sm flex justify-center tracking-normal items-center">
@@ -34,7 +34,7 @@ function Header({ data }) {
                 {data.media_type.toUpperCase()}
               </div>
             </div>
-            <div className="text-sm flex justify-center tracking-normal items-center" >
+            <div className="text-xl flex justify-center tracking-normal items-center" >
               <Link className="text-blue-400 flex items-center gap-1 hover:text-blue-300 hover:scale-150 transition-all ease-out duration-200">
                 <LuPlayCircle />
                 <h1>Watch Trailer</h1>

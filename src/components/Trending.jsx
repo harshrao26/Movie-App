@@ -18,7 +18,9 @@ function Trending() {
   const getTrending = async () => {
     try {
       // Fetch trending data based on category, duration, and page number
-      const { data } = await axios.get(`/trending/${category}/${duration}?page=${page}`);
+      const { data } = await axios.get(
+        `/trending/${category}/${duration}?page=${page}`
+      );
       setTrending((prevTrending) => [...prevTrending, ...data.results]);
       setPage(page + 1); // Increment page number for next pagination
     } catch (error) {
@@ -46,10 +48,14 @@ function Trending() {
           className="flex gap- items-center text-lg cursor-pointer"
           onClick={() => back(-1)}
         >
-          <IoIosArrowBack className="text-blue-500" /> Back
+          <div className="hover:scale-125 flex transition-all ease-in-out items-cente">
+            <IoIosArrowBack className="text-blue-500" /> Back
+          </div>
         </div>
         <div className="flex justify-between items-center">
-          <h1 className="text-5xl tracking-tighter ">Trending</h1>
+          <h1 className="text-4xl px-8 py-2 mb-4 tracking-tighter bg-gradient-to-r from-blue-500 to-zinc-900">Trending</h1>
+
+          {/* <h1 className="text-5xl tracking-tighter ">Trending</h1> */}
           <div className="w-[200vw]">
             <Topnav />
           </div>

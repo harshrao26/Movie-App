@@ -29,7 +29,9 @@ function Home() {
       <div className="flex h-screen bg-zinc-900 relative ">
         <Sidenav />
         <div className="w-[80%] ml-[20%] ">
+          <div className="">
           <Topnav />
+          </div>
           <Header data={wallpaper}  className=""/>
           <TrendingCardContainer className="mt-[80vh]" />
         </div>

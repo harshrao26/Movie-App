@@ -53,7 +53,7 @@ function Sidenav() {
             <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <FaDisplay /> TV Shows
             </Link>
-            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
+            <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <BsFillPeopleFill /> Pepole
             </Link>
           </div>
@@ -62,10 +62,10 @@ function Sidenav() {
             <h1 className="font-semibold tracking-tight text-blue-500">
               Website Info.
             </h1>
-            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white ">
+            <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <IoIosInformationCircle /> About{" "}
             </Link>
-            <Link className="flex items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-[#6556cd] text-white ">
+            <Link className="flex text-sm items-center gap-2 hover:pl-4 transition-all ease-in-out rounded-xl py-2 hover:bg-blue-500 text-white ">
               <IoMdCall /> Contact{" "}
             </Link>
           </div>

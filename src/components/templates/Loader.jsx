@@ -5,7 +5,7 @@ function Loader() {
   return (
     <>
       <div className="bg-green400 w-full h-full flex justify-center items-center">  
-        <img className="w-[35%]" src={Loading} alt="Loading..." />
+        <img className="w-[25%]" src={Loading} alt="Loading..." />
       </div>
     </>
   );

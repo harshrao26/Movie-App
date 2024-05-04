@@ -25,13 +25,13 @@ function Topnav() {
   }, [query]);
   return (
     <>
-      <div className="relative border-l- border-blue-500  text-black z-50">
+      <div className="relative h-24 border-l- border-blue-500  text-black z-50">
         <div className="flex items-center text-white gap-4 w-full text-2xl h-20 justify-center">
           <IoSearchSharp className="" />
           <input
             onChange={(e) => setQuery(e.target.value)}
             value={query}
-            className="w-[50%]  bg-transparent border-2 border-solid border-white py-1 px-4 text-lg rounded-xl outline-none"
+            className="w-[50%] bg-transparent border-2 border-solid border-white py-1 px-4 text-lg rounded-xl outline-none"
             placeholder="Search"
             type="text"
             name=""
