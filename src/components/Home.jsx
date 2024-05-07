@@ -12,11 +12,11 @@ function Home() {
   const [wallpaper, setWallpaper] = useState(null);
   const getWallpaper = async () => {
     try {
-      // const { data } = await axios.get(`/trending/all/day`);
-      // let randomWallpaper =
-      //   data.results[Math.floor(Math.random() * data.results.length)];
+      const { data } = await axios.get(`/trending/all/day`);
+      let randomWallpaper =
+        data.results[Math.floor(Math.random() * data.results.length)];
 
-      // setWallpaper(randomWallpaper);
+      setWallpaper(randomWallpaper);
     } catch (error) {
       console.log(error);
     }
