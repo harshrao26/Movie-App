@@ -25,8 +25,8 @@ function Topnav() {
   }, [query]);
   return (
     <>
-      <div className="relative h-24 border-l- border-blue-500  text-black z-50">
-        <div className="flex items-center text-white gap-4 w-full text-2xl h-20 justify-center">
+      <div className="relative md:h-24 transition-all ease-in-out  border-l- border-blue-500  text-black z-50 mr-4 md:mr-0">
+        <div className="flex items-center text-white gap-4 w-full text-2xl h-24 lg:justify-center justify-end ">
           <IoSearchSharp className="" />
           <input
             onChange={(e) => setQuery(e.target.value)}
@@ -39,7 +39,7 @@ function Topnav() {
           />
           {query && <RxCross2 className="" onClick={() => setQuery("")} />}
         </div>
-        <div className="bg-zinc-100 w-[50%] max-h-[80vh] ml-[25%] overflow-auto rounded-lg absolute">
+        <div className="bg-zinc-100 w-[50%] max-h-[70vh] md:ml-[25%] ml-[38%] -mt-4 md:mt-0 overflow-auto rounded-lg absolute text-xs">
           {/* <Link className="flex items-center gap-4 px-4 py-8 bg-zinc-200 ">
             <img src="" alt="Image" />
             <p>Text</p>

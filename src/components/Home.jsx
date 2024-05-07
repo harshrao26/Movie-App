@@ -4,9 +4,9 @@ import Header from "./templates/Header";
 import Topnav from "./templates/Topnav";
 import axios from "../utils/axios";
 import TrendingCardContainer from "./templates/TrendingCardContainer";
-import Loader from '../components/templates/Loader';
-import SignIn  from "../pages/SignIn";
-import SignUp  from "../pages/SignUp";
+import Loader from "../components/templates/Loader";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
 import { Link } from "react-router-dom";
 function Home() {
   const [wallpaper, setWallpaper] = useState(null);
@@ -29,18 +29,17 @@ function Home() {
   }, []);
   return wallpaper ? (
     <>
-      <div className="flex h-screen bg-zinc-900 relative ">
+      <div className="flex bg-zinc-900 relative ">
         <Sidenav />
         <div className="w-[80%] ml-[20%] ">
           <div className="">
-          <Topnav /> 
+            <Topnav />
           </div>
-          <Header data={wallpaper}  className=""/>
+          <Header data={wallpaper} className="" />
           <TrendingCardContainer className="mt-[80vh]" />
         </div>
       </div>
-    <Link to="/signin">Sign In</Link> 
-
+      {/* <Link to="/signin">Sign In</Link>  */}
     </>
   ) : (
     <div className="w-full h-screen flex justify-center items-center text-white text-4xl">

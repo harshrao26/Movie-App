@@ -3,7 +3,7 @@ import noimg from "../../assets/no-image.png";
 import { Link } from "react-router-dom";
 function TrendingCard({ data }) {
   return (
-    <Link className="w-[15%] rounded-md relative overflow-hidden" to={``}>
+    <Link className="w-40 lg:w-48 rounded-md relative overflow-hidden" to={``}>
       <img
         src={
           data.backdrop_path || data.poster_path
@@ -21,7 +21,7 @@ function TrendingCard({ data }) {
           background: `linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3),rgba(0,0,0,2))`,
         }}
       />
-      <h1 className="text-white absolute bottom-0 w-full text-[1.1vw] font-semibold tracking-tighter p-2">
+      <h1 className="text-white absolute bottom-0 w-full text-md font-semibold tracking-tighter p-2">
         {data.title || data.original_name || data.original_title || data.name}
       </h1>
       {/* <p className="absolute bottom-0 w-full text-sm p-2">{data.overview}</p> */}

@@ -11,8 +11,8 @@ import { IoMdCall } from "react-icons/io";
 function Sidenav() {
   return (
     <>
-      <div className="w-[20%] fixed top-0 h-[100vh] z-50 text-white ">
-        <div className="flex text-white h-24 items-center justify-center gap-2">
+      <div className=" fixed top-0 h-[100vh] z-50 text-white md:p-4">
+        <div className="flex text-white md:mt-4 mt-8 md:mb-10 mb-5 items-center justify-center gap-2">
           <svg
             className="lg:w-16 w-8 text-blue-500"
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ function Sidenav() {
             <p className="text-[14a800]">Stream</p>ify
           </p>
         </div>
-        <nav className="flex flex-col gap-4 text-white px-5">
+        <nav className="flex flex-col gap-4 text-white md:px-0 px-5">
           <div className="flex flex-col gap-4">
             {/* <h1 className=" text-md text-center px-4 py-2 rounded-xl font-semibold bg-blue-500">
               New Feeds

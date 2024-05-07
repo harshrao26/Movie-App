@@ -7,7 +7,7 @@ import { LuPlayCircle } from "react-icons/lu";
 function Header({ data }) {
   return (
     <>
-      <div className="w-full left-0  flex justify-center absolute top-0 z-10">
+      <div className="md:w-full left-0  flex justify-center absolute top-0 z-10">
         <div
           style={{
             background: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.2),rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original/${

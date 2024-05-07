@@ -43,23 +43,26 @@ function Trending() {
 
   return (
     <>
-      <div className="text-white p-10 ">
+      <div className="text-white px-5 py-2 md:px-10 md:py-5 ">
         <div
           className="flex gap- items-center text-lg cursor-pointer"
           onClick={() => back(-1)}
         >
-          <div className="hover:scale-125 flex transition-all ease-in-out items-cente">
-            <IoIosArrowBack className="text-blue-500" /> Back
+          <div className="flex items-center justify-around w-full relative ">
+            <div class="hover:scale-125 flex transition-all ease-in-out items-center">
+              <IoIosArrowBack className="text-blue-500" />
+              <p className="hidden md:block">Back</p>
+            </div>
+            <div className="w-full h-auto ">
+              <Topnav />
+            </div>
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <h1 className="text-4xl px-8 py-2 mb-4 tracking-tighter bg-gradient-to-r from-blue-500 to-zinc-900">Trending</h1>
-
-          {/* <h1 className="text-5xl tracking-tighter ">Trending</h1> */}
-          <div className="w-[200vw]">
-            <Topnav />
-          </div>
-          <div className="flex gap-4">
+          <h1 className=" text-2xl px-8 py-2 mb-4 tracking-tighter rounded-lg bg-gradient-to-r hidden md:block from-blue-500 to-zinc-900">
+            Trending
+          </h1>
+          <div className="gap-4 flex items-cente">
             <Dropdown
               title="Category"
               onChange={handleCategoryChange}
